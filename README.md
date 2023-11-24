@@ -25,6 +25,10 @@ WordPress/Requests PSR-18 Adapter is [available on Packagist](https://packagist.
 
 ```bash
 composer require art4/requests-psr18-adapter
+
+# Add a `provide` entry to tell Composer not to install Requests.
+# brew install jq sponge
+cat composer.json | jq ".provide += { \"rmccue/requests\": \"*\" }" | sponge composer.json
 ```
 
 ### Examples
